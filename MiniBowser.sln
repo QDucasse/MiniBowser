@@ -1,0 +1,36 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserUI", "MiniBowser2UI\MiniBowserUI.csproj", "{80E34E47-511F-48B0-9120-E960F2308569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowser", "MiniBowser2\MiniBowser.csproj", "{2135ECC2-606B-405A-88A3-09075B193AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserTests", "MiniBowser2Tests\MiniBowserTests.csproj", "{E36E6484-B941-4E2A-A684-4C08B29154E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80E34E47-511F-48B0-9120-E960F2308569}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{80E34E47-511F-48B0-9120-E960F2308569}.Debug|anycpu.Build.0 = Debug|anycpu
+		{80E34E47-511F-48B0-9120-E960F2308569}.Release|anycpu.ActiveCfg = Release|anycpu
+		{80E34E47-511F-48B0-9120-E960F2308569}.Release|anycpu.Build.0 = Release|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Debug|anycpu.Build.0 = Debug|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Release|anycpu.ActiveCfg = Release|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Release|anycpu.Build.0 = Release|anycpu
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Release|anycpu.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
+	EndGlobalSection
+EndGlobal
