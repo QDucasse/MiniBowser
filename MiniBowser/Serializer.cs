@@ -8,7 +8,7 @@ namespace MiniBowser
     public class Serializer
     {
         // Paths to the files
-        private static string _basePath = AppDomain.CurrentDomain.BaseDirectory + @"../../../../";
+        private static string _basePath = AppDomain.CurrentDomain.BaseDirectory + @"../../../MiniBowserData/";
         public static string pathHistory = _basePath + @"history.json";
         public static string pathBookmarks = _basePath + @"bookmarks.json";
         public static string pathHomepage = _basePath + @"homepage.json";

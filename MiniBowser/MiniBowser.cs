@@ -21,7 +21,7 @@ namespace MiniBowser
         { get; set; }
 
         public List<Bookmark> BookmarkList
-        { get; private set; }
+        { get; set; }
 
         public History History
         { get; private set; }
@@ -43,6 +43,7 @@ namespace MiniBowser
             else
             {
                 History = new History();
+                History.UrlList = new List<string>() { "", "", "", "", "", "", "", "" };
             }
             // Load bookmarks if existing
             if (File.Exists(Serializer.pathBookmarks))
@@ -51,7 +52,10 @@ namespace MiniBowser
             }
             else
             {
-                BookmarkList = new List<Bookmark>();
+                BookmarkList = new List<Bookmark>() { new Bookmark("", ""), new Bookmark("", ""),
+                                                      new Bookmark("", ""), new Bookmark("", ""),
+                                                      new Bookmark("", ""), new Bookmark("", ""),
+                                                      new Bookmark("", ""), new Bookmark("", "") };
             }
 
             // Load Homepage if existing
@@ -82,6 +86,15 @@ namespace MiniBowser
         public void Store()
         {
             Serializer.SerializeAndStoreBrowser(this);
+        }
+
+        public string RequestResult(string url)
+        {
+            HttpData requestRes = new HttpData();
+            Task<HttpData> taskRes = httpHandler.RequestResponse(url);
+            requestRes = taskRes.Result;
+            // display html content(tostring)
+            return requestRes.ToString();
         }
     }
 }

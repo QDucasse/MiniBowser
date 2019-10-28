@@ -1,30 +1,45 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserUI", "MiniBowser2UI\MiniBowserUI.csproj", "{80E34E47-511F-48B0-9120-E960F2308569}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserGUI", "MiniBowserGUI\MiniBowserGUI.csproj", "{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowser", "MiniBowser2\MiniBowser.csproj", "{2135ECC2-606B-405A-88A3-09075B193AD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowser", "MiniBowser\MiniBowser.csproj", "{2135ECC2-606B-405A-88A3-09075B193AD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserTests", "MiniBowser2Tests\MiniBowserTests.csproj", "{E36E6484-B941-4E2A-A684-4C08B29154E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniBowserTests", "MiniBowserTests\MiniBowserTests.csproj", "{E36E6484-B941-4E2A-A684-4C08B29154E3}"
+EndProject
+Project("{9344BDBB-3E7F-41FC-A0DD-8665D75EE146}") = "MiniBowserData", "MiniBowserData\MiniBowserData.mdproj", "{45463FD8-514C-4BC1-83D0-1C720BA91C5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
 		Release|anycpu = Release|anycpu
+		Default|Any CPU = Default|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{80E34E47-511F-48B0-9120-E960F2308569}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{80E34E47-511F-48B0-9120-E960F2308569}.Debug|anycpu.Build.0 = Debug|anycpu
-		{80E34E47-511F-48B0-9120-E960F2308569}.Release|anycpu.ActiveCfg = Release|anycpu
-		{80E34E47-511F-48B0-9120-E960F2308569}.Release|anycpu.Build.0 = Release|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Debug|anycpu.Build.0 = Debug|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Release|anycpu.ActiveCfg = Release|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Release|anycpu.Build.0 = Release|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Default|Any CPU.ActiveCfg = Debug|anycpu
+		{7E778DF7-0AEB-405D-8B73-A39CB7B6F1A1}.Default|Any CPU.Build.0 = Debug|anycpu
 		{2135ECC2-606B-405A-88A3-09075B193AD3}.Debug|anycpu.ActiveCfg = Debug|anycpu
 		{2135ECC2-606B-405A-88A3-09075B193AD3}.Debug|anycpu.Build.0 = Debug|anycpu
 		{2135ECC2-606B-405A-88A3-09075B193AD3}.Release|anycpu.ActiveCfg = Release|anycpu
 		{2135ECC2-606B-405A-88A3-09075B193AD3}.Release|anycpu.Build.0 = Release|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Default|Any CPU.ActiveCfg = Debug|anycpu
+		{2135ECC2-606B-405A-88A3-09075B193AD3}.Default|Any CPU.Build.0 = Debug|anycpu
 		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Debug|anycpu.ActiveCfg = Debug|Any CPU
 		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Debug|anycpu.Build.0 = Debug|Any CPU
 		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Release|anycpu.ActiveCfg = Release|Any CPU
 		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Release|anycpu.Build.0 = Release|Any CPU
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36E6484-B941-4E2A-A684-4C08B29154E3}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Debug|anycpu.ActiveCfg = Default|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Debug|anycpu.Build.0 = Default|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Release|anycpu.ActiveCfg = Default|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Release|anycpu.Build.0 = Default|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{45463FD8-514C-4BC1-83D0-1C720BA91C5F}.Default|Any CPU.Build.0 = Default|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

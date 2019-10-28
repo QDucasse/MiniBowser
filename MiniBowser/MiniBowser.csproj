@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
     <ProjectGuid>{2135ECC2-606B-405A-88A3-09075B193AD3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>MiniBowser2</RootNamespace>
     <AssemblyName>MiniBowser2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>

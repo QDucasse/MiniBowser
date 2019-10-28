@@ -43,7 +43,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MiniBowser2\MiniBowser.csproj">
+    <ProjectReference Include="..\MiniBowser\MiniBowser.csproj">
       <Project>{2135ECC2-606B-405A-88A3-09075B193AD3}</Project>
       <Name>MiniBowser</Name>
     </ProjectReference>

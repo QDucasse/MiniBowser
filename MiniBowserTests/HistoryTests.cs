@@ -14,7 +14,6 @@ namespace MiniBowserTests
 
             // Assert
             Assert.IsTrue(hist.UrlList.Contains("https://www.google.com/"));
-            Assert.AreEqual("https://www.google.com/", hist.GetCurrentSite());
         }
 
         [Test]
@@ -25,11 +24,10 @@ namespace MiniBowserTests
 
             // Assert
             Assert.IsTrue(hist.UrlList.Contains("https://www.google.com/"));
-            Assert.AreEqual("https://www.google.com/", hist.GetCurrentSite());
         }
 
         [Test]
-        public void TestAddSiteToQueue()
+        public void TestAddSiteToList()
         {
             // Arrange
             History hist = new History();
@@ -39,7 +37,7 @@ namespace MiniBowserTests
 
             // Assert
             Assert.IsTrue(hist.UrlList.Contains("https://www.hw.ac.uk/"));
-            Assert.AreEqual("https://www.hw.ac.uk/", hist.GetCurrentSite());
+            Assert.AreEqual("https://www.hw.ac.uk/", hist.GetLastSite());
         }
 
         [Test]
@@ -53,7 +51,7 @@ namespace MiniBowserTests
 
             // Assert
             Assert.IsTrue(hist.UrlList.Contains("https://www.hw.ac.uk/"));
-            Assert.AreEqual("https://www.hw.ac.uk/", hist.GetCurrentSite());
+            Assert.AreEqual("https://www.hw.ac.uk/", hist.GetLastSite());
 
             Assert.IsTrue(hist.PreviousSites.Contains("https://www.hw.ac.uk/"));
             Assert.AreEqual("https://www.hw.ac.uk/", hist.PreviousSites.Pop());
@@ -75,8 +73,6 @@ namespace MiniBowserTests
             Assert.IsTrue(hist.NextSites.Contains("https://www.vision.hw.ac.uk/"));
             Assert.AreEqual("https://www.vision.hw.ac.uk/", hist.NextSites.Pop());
 
-            Assert.IsTrue(hist.UrlList.Contains("https://www.vision.hw.ac.uk/"));
-            Assert.AreEqual("https://www.vision.hw.ac.uk/", hist.GetCurrentSite());
         }
 
         [Test]

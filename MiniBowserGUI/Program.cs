@@ -1,7 +1,7 @@
 ﻿using System;
 using Gtk;
 
-namespace MiniBowser2UI
+namespace MiniBowserGUI
 {
     class MainClass
     {
