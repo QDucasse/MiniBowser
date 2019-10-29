@@ -33,7 +33,6 @@ namespace MiniBowser
         // Constructor
         public MiniBowser()
         {
-            //TODO! Extract the behavior and reuse it
             Serializer = new Serializer();
             // Load history if existing
             if (File.Exists(Serializer.pathHistory))
@@ -43,7 +42,6 @@ namespace MiniBowser
             else
             {
                 History = new History();
-                History.UrlList = new List<string>() { "", "", "", "", "", "", "", "" };
             }
             // Load bookmarks if existing
             if (File.Exists(Serializer.pathBookmarks))
@@ -52,10 +50,7 @@ namespace MiniBowser
             }
             else
             {
-                BookmarkList = new List<Bookmark>() { new Bookmark("", ""), new Bookmark("", ""),
-                                                      new Bookmark("", ""), new Bookmark("", ""),
-                                                      new Bookmark("", ""), new Bookmark("", ""),
-                                                      new Bookmark("", ""), new Bookmark("", "") };
+                BookmarkList = new List<Bookmark>() ;
             }
 
             // Load Homepage if existing
@@ -88,13 +83,10 @@ namespace MiniBowser
             Serializer.SerializeAndStoreBrowser(this);
         }
 
+
         public string RequestResult(string url)
         {
-            HttpData requestRes = new HttpData();
-            Task<HttpData> taskRes = httpHandler.RequestResponse(url);
-            requestRes = taskRes.Result;
-            // display html content(tostring)
-            return requestRes.ToString();
+            return httpHandler.RequestStringResult(url);
         }
     }
 }

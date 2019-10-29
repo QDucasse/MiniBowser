@@ -139,6 +139,7 @@ namespace MiniBowserGUI
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
 			this.urlEntry1 = new global::Gtk.Entry();
+			this.urlEntry1.Sensitive = false;
 			this.urlEntry1.CanFocus = true;
 			this.urlEntry1.Name = "urlEntry1";
 			this.urlEntry1.IsEditable = true;
@@ -166,6 +167,7 @@ namespace MiniBowserGUI
 			this.hbox3.Spacing = 6;
 			// Container child hbox3.Gtk.Box+BoxChild
 			this.urlEntry2 = new global::Gtk.Entry();
+			this.urlEntry2.Sensitive = false;
 			this.urlEntry2.CanFocus = true;
 			this.urlEntry2.Name = "urlEntry2";
 			this.urlEntry2.IsEditable = true;
@@ -193,6 +195,7 @@ namespace MiniBowserGUI
 			this.hbox5.Spacing = 6;
 			// Container child hbox5.Gtk.Box+BoxChild
 			this.urlEntry3 = new global::Gtk.Entry();
+			this.urlEntry3.Sensitive = false;
 			this.urlEntry3.CanFocus = true;
 			this.urlEntry3.Name = "urlEntry3";
 			this.urlEntry3.IsEditable = true;
@@ -229,6 +232,7 @@ namespace MiniBowserGUI
 			this.hbox7.Spacing = 6;
 			// Container child hbox7.Gtk.Box+BoxChild
 			this.urlEntry4 = new global::Gtk.Entry();
+			this.urlEntry4.Sensitive = false;
 			this.urlEntry4.CanFocus = true;
 			this.urlEntry4.Name = "urlEntry4";
 			this.urlEntry4.IsEditable = true;
@@ -256,6 +260,7 @@ namespace MiniBowserGUI
 			this.hbox9.Spacing = 6;
 			// Container child hbox9.Gtk.Box+BoxChild
 			this.urlEntry5 = new global::Gtk.Entry();
+			this.urlEntry5.Sensitive = false;
 			this.urlEntry5.CanFocus = true;
 			this.urlEntry5.Name = "urlEntry5";
 			this.urlEntry5.IsEditable = true;
@@ -283,6 +288,7 @@ namespace MiniBowserGUI
 			this.hbox17.Spacing = 6;
 			// Container child hbox17.Gtk.Box+BoxChild
 			this.urlEntry6 = new global::Gtk.Entry();
+			this.urlEntry6.Sensitive = false;
 			this.urlEntry6.CanFocus = true;
 			this.urlEntry6.Name = "urlEntry6";
 			this.urlEntry6.IsEditable = true;
@@ -319,6 +325,7 @@ namespace MiniBowserGUI
 			this.hbox15.Spacing = 6;
 			// Container child hbox15.Gtk.Box+BoxChild
 			this.urlEntry7 = new global::Gtk.Entry();
+			this.urlEntry7.Sensitive = false;
 			this.urlEntry7.CanFocus = true;
 			this.urlEntry7.Name = "urlEntry7";
 			this.urlEntry7.IsEditable = true;
@@ -346,6 +353,7 @@ namespace MiniBowserGUI
 			this.hbox13.Spacing = 6;
 			// Container child hbox13.Gtk.Box+BoxChild
 			this.urlEntry8 = new global::Gtk.Entry();
+			this.urlEntry8.Sensitive = false;
 			this.urlEntry8.CanFocus = true;
 			this.urlEntry8.Name = "urlEntry8";
 			this.urlEntry8.IsEditable = true;

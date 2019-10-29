@@ -13,10 +13,10 @@ namespace MiniBowser
         { get; set; }
 
         public Stack<string> PreviousSites
-        { get; private set; }
+        { get; set; }
 
         public Stack<string> NextSites
-        { get; private set; }
+        { get; set; }
 
         // Constructors
         public History(string homePageUrl)

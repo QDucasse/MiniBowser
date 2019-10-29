@@ -96,6 +96,9 @@ namespace MiniBowserGUI
             urlEntry7.Text = "";
             urlEntry8.Text = "";
             ParentWin.mb.History.UrlList = new List<string>() { "", "", "", "", "", "", "", "" };
+            ParentWin.mb.History.PreviousSites = new Stack<string>();
+            ParentWin.mb.History.NextSites = new Stack<string>();
+            ParentWin.CheckButtonsStatus();
             Destroy();
         }
     }

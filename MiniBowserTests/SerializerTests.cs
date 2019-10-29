@@ -16,8 +16,6 @@ namespace MiniBowserTests
         [SetUp]
         public void TestInitialize()
         {
-            //TODO! COPY THE CONTENTS BEFORE REMOVING
-            //TODO! Add teardown to put the content back into the files
             File.Delete(Serializer.pathHistory);
             File.Delete(Serializer.pathBookmarks);
             File.Delete(Serializer.pathHomepage);

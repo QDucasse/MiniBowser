@@ -42,7 +42,6 @@
     <Compile Include="HttpHandler.cs" />
     <Compile Include="MiniBowser.cs" />
     <Compile Include="Serializer.cs" />
-    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

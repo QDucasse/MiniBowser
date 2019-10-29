@@ -5,7 +5,7 @@
   </configuration>
   <import>
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <widget-library name="../bin/Debug/MiniBowserGUI.exe" internal="true" />
+    <widget-library name="../bin/Release/MiniBowserGUI.exe" internal="true" />
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="596 300">
     <action-group name="Default">
@@ -797,14 +797,6 @@
       </widget>
     </child>
   </widget>
-  <widget class="Gtk.Window" id="MiniBowserGUI.HistoryWindow" design-size="400 300">
-    <property name="MemberName" />
-    <property name="Title" translatable="yes">HistoryWindow</property>
-    <property name="WindowPosition">CenterOnParent</property>
-    <child>
-      <placeholder />
-    </child>
-  </widget>
   <widget class="Gtk.Window" id="MiniBowserGUI.HistWindow" design-size="400 390">
     <action-group name="Default">
       <action id="goButton1">
@@ -888,6 +880,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry1">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -925,6 +918,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry2">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -962,6 +956,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry3">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -1011,6 +1006,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry4">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -1048,6 +1044,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry5">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -1085,6 +1082,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry6">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -1134,6 +1132,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry7">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>
@@ -1171,6 +1170,7 @@
                 <child>
                   <widget class="Gtk.Entry" id="urlEntry8">
                     <property name="MemberName" />
+                    <property name="Sensitive">False</property>
                     <property name="CanFocus">True</property>
                     <property name="IsEditable">True</property>
                     <property name="InvisibleChar">●</property>

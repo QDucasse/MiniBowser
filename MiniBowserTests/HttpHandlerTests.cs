@@ -15,7 +15,7 @@ namespace MiniBowserTests
             HttpHandler httpHandler = new HttpHandler();
 
             // Act
-            Task<HttpData> taskRes = httpHandler.RequestResponse("http://httpstat.us/200");
+            Task<HttpData> taskRes = httpHandler.RequestHTTPResponse("http://httpstat.us/200");
             requestRes = taskRes.Result;
 
             // Assert
@@ -30,7 +30,7 @@ namespace MiniBowserTests
             HttpHandler httpHandler = new HttpHandler();
 
             // Act
-            Task<HttpData> taskRes = httpHandler.RequestResponse("http://httpstat.us/400");
+            Task<HttpData> taskRes = httpHandler.RequestHTTPResponse("http://httpstat.us/400");
             requestRes = taskRes.Result;
 
             // Assert
@@ -45,7 +45,7 @@ namespace MiniBowserTests
             HttpHandler httpHandler = new HttpHandler();
 
             // Act
-            Task<HttpData> taskRes = httpHandler.RequestResponse("http://httpstat.us/403");
+            Task<HttpData> taskRes = httpHandler.RequestHTTPResponse("http://httpstat.us/403");
             requestRes = taskRes.Result;
 
             // Assert
@@ -60,11 +60,25 @@ namespace MiniBowserTests
             HttpHandler httpHandler = new HttpHandler();
 
             // Act
-            Task<HttpData> taskRes = httpHandler.RequestResponse("http://httpstat.us/404");
+            Task<HttpData> taskRes = httpHandler.RequestHTTPResponse("http://httpstat.us/404");
             requestRes = taskRes.Result;
 
             // Assert
             Assert.AreEqual(requestRes.StatusCode, "NotFound");
+        }
+
+        [Test]
+        public void TestRequestIncorrectUrl()
+        {
+            // Arrange
+            HttpHandler httpHandler = new HttpHandler();
+            string url = "http://http";
+
+            // Act
+            string res = httpHandler.RequestStringResult(url);
+
+            // Assert
+            Assert.AreEqual(res, "Incorrect URL");
         }
     }
 
@@ -87,8 +101,7 @@ namespace MiniBowserTests
         {
             // Arrange
             HttpData httpData = new HttpData("200", "<h1>Hello</h1>");
-            string expected = "STATUS CODE:\n200\nHTML CONTENT:\n<h1>Hello</h1>";
-
+            string expected = "STATUS CODE: 200\n\nHTML TITLE: \n\nHTML CONTENT:\n<h1>Hello</h1>";
             // Act
             string result = httpData.ToString();
 

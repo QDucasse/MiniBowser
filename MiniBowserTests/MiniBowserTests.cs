@@ -7,15 +7,32 @@ namespace MiniBowserTests
     public class MiniBowserTests
     {
         [Test]
-        // TODO!!
-        public void TestInitialisation()
+        public void TestAddBookmark()
         {
             // Arrange
             Bookmark bm = new Bookmark("Google", "http://www.google.com");
+            MiniBowser.MiniBowser mb = new MiniBowser.MiniBowser();
+
+            // Act
+            mb.AddBookmark(bm);
 
             // Assert
-            Assert.AreEqual("Google", bm.Name);
-            Assert.AreEqual("http://www.google.com", bm.Url);
+            Assert.IsTrue(mb.BookmarkList.Contains(bm));
+        }
+
+        [Test]
+        public void TestRemoveBookmark()
+        {
+            // Arrange
+            Bookmark bm = new Bookmark("Google", "http://www.google.com");
+            MiniBowser.MiniBowser mb = new MiniBowser.MiniBowser();
+            mb.AddBookmark(bm);
+
+            // Act
+            mb.RemoveBookmark(bm);
+
+            // Assert
+            Assert.IsFalse(mb.BookmarkList.Contains(bm));
         }
     }
 }

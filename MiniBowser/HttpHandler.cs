@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 
@@ -8,7 +9,7 @@ namespace MiniBowser
     public class HttpHandler : HttpClient
     {
 
-        public async Task<HttpData> RequestResponse(string url)
+        public async Task<HttpData> RequestHTTPResponse(string url)
         {
             HttpData responseData = new HttpData();
 
@@ -30,6 +31,24 @@ namespace MiniBowser
             return responseData;
 
         }
+
+        public string RequestStringResult(string url)
+        {
+            Match m = Regex.Match(url, @"https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)");
+            if (m.Success)
+            {
+                HttpData requestRes = new HttpData();
+                Task<HttpData> taskRes = RequestHTTPResponse(url);
+                requestRes = taskRes.Result;
+                // display html content(tostring)
+                Console.WriteLine(taskRes);
+                return requestRes.ToString();
+            }
+            else
+            {
+                return "Incorrect URL";
+            }
+        }
     }
 
     public class HttpData
@@ -41,6 +60,9 @@ namespace MiniBowser
         public string StatusCode
         { get; set; }
 
+        public string HtmlTitle
+        { get; set; }
+
         public string HtmlBody
         { get; set; }
 
@@ -49,6 +71,15 @@ namespace MiniBowser
         {
             StatusCode = statusCode;
             HtmlBody = htmlBody;
+            Match m = Regex.Match(htmlBody, @"<title>\s*(.+?)\s*</title>");
+            if (m.Success)
+            {
+                HtmlTitle =  m.Groups[1].Value;
+            }
+            else
+            {
+                HtmlTitle = "";
+            }
         }
 
         public HttpData()
@@ -60,7 +91,7 @@ namespace MiniBowser
         // Methods
         public override string ToString()
         {
-            return string.Format("STATUS CODE:\n{0}\nHTML CONTENT:\n{1}", StatusCode, HtmlBody);
+            return string.Format("STATUS CODE: {0}\n\nHTML TITLE: {1}\n\nHTML CONTENT:\n{2}", StatusCode, HtmlTitle, HtmlBody);
         }
     }
 }

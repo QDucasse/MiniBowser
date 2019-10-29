@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Gtk;
 using MiniBowserGUI;
 
@@ -10,15 +11,39 @@ public partial class MainWindow : Gtk.Window
     public MainWindow() : base(Gtk.WindowType.Toplevel)
     {
         Build();
+        InitializeBrowser();
+        
+    }
+
+    public void InitializeBrowser()
+    {
         mb = new MiniBowser.MiniBowser();
+        // if the urlList is empty, fills it with empty strings (for display purposes)
+        if (mb.History.UrlList.Count <= 8)
+        {
+            List<string> emptyUrlList = new List<string> { "", "", "", "", "", "", "", "" };
+            mb.History.UrlList.AddRange(emptyUrlList);
+        }
+        // if the bookmark list is empty, fills it with empty bookmarks (for display purposes)
+        if (mb.BookmarkList.Count <= 8)
+        {
+            List<MiniBowser.Bookmark> emptyBookmarkList = new List<MiniBowser.Bookmark> { new MiniBowser.Bookmark("", ""), new MiniBowser.Bookmark("", ""),
+                                                                                          new MiniBowser.Bookmark("", ""), new MiniBowser.Bookmark("", ""),
+                                                                                          new MiniBowser.Bookmark("", ""), new MiniBowser.Bookmark("", ""),
+                                                                                          new MiniBowser.Bookmark("", ""), new MiniBowser.Bookmark("", "") };
+            mb.BookmarkList.AddRange(emptyBookmarkList);
+        }
+        // store the initial state
+        mb.Store();
+        // loads the homepage
         urlEntry.Text = mb.Homepage;
-        // add the site to the history
         mb.CurrentSite = mb.Homepage;
         // http load homepage
         // display html content(tostring)
         htmlTextView.Buffer.Text = mb.RequestResult(mb.Homepage);
         CheckButtonsStatus();
     }
+
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
@@ -144,6 +169,7 @@ public partial class MainWindow : Gtk.Window
     {
         urlEntry.Text = url;
         htmlTextView.Buffer.Text = "";
+        CheckButtonsStatus();
     }
 
 
