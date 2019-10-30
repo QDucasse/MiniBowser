@@ -59,7 +59,6 @@ namespace MiniBowser
                 Task<HttpData> taskRes = RequestHTTPResponse(url);
                 requestRes = taskRes.Result;
                 // display html content(tostring)
-                Console.WriteLine(taskRes);
                 return requestRes.ToString();
             }
             else
@@ -142,7 +141,8 @@ namespace MiniBowser
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("STATUS CODE: {0}\n\nHTML TITLE: {1}\n\nHTML CONTENT:\n{2}", StatusCode, HtmlTitle, HtmlBody);
+            return string.Format("STATUS CODE: {0}\n\nHTML TITLE: " +
+                "{1}\n\nHTML CONTENT:\n{2}", StatusCode, HtmlTitle, HtmlBody);
         }
     }
 }
