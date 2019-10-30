@@ -6,6 +6,9 @@ namespace MiniBowserTests
     [TestFixture()]
     public class MiniBowserTests
     {
+        /// <summary>
+        /// Test the add bookmark operation.
+        /// </summary>
         [Test]
         public void TestAddBookmark()
         {
@@ -20,6 +23,9 @@ namespace MiniBowserTests
             Assert.IsTrue(mb.BookmarkList.Contains(bm));
         }
 
+        /// <summary>
+        /// Test the remove bookmark operation.
+        /// </summary>
         [Test]
         public void TestRemoveBookmark()
         {

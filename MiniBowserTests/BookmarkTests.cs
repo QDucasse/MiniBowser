@@ -6,6 +6,9 @@ namespace MiniBowserTests
     [TestFixture]
     public class BookmarkTests
     {
+        /// <summary>
+        /// Tests the initialisation of a Bookmark object.
+        /// </summary>
         [Test]
         public void TestInitialisation()
         {

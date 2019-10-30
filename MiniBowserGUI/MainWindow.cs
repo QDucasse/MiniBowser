@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using Gtk;
 using MiniBowserGUI;
 
+/// <summary>
+/// Main window of the browser.
+/// </summary>
 public partial class MainWindow : Gtk.Window
 {
-
+    /// <summary>
+    /// Backend model of the browser
+    /// </summary>
     public MiniBowser.MiniBowser mb;
 
     public MainWindow() : base(Gtk.WindowType.Toplevel)
@@ -14,7 +19,11 @@ public partial class MainWindow : Gtk.Window
         InitializeBrowser();
         
     }
-
+    /// <summary>
+    /// Initializes the browser by loading the objects from the file as
+    /// well as adding some elemtns to the different lists so no problem occurs
+    /// when displaying the UI.
+    /// </summary>
     public void InitializeBrowser()
     {
         mb = new MiniBowser.MiniBowser();
@@ -44,7 +53,43 @@ public partial class MainWindow : Gtk.Window
         CheckButtonsStatus();
     }
 
+    /// <summary>
+    /// If the previous stack is empty -> previous button unavailable
+    /// if the next stack is empty -> next button unavailable
+    /// </summary>
+    public void CheckButtonsStatus()
+    {
+        if (mb.History.PreviousSites.Count == 0)
+        {
+            previousButton.Sensitive = false;
+        }
+        else
+        {
+            previousButton.Sensitive = true;
+        }
 
+        if (mb.History.NextSites.Count == 0)
+        {
+            nextButton.Sensitive = false;
+        }
+        else
+        {
+            nextButton.Sensitive = true;
+        }
+    }
+
+    /// <summary>
+    /// Load the request result in the text view
+    /// </summary>
+    public void LoadSite(string url)
+    {
+        urlEntry.Text = url;
+        htmlTextView.Buffer.Text = "";
+        CheckButtonsStatus();
+    }
+
+    // Event Methods
+    // =============
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
         mb.Store();
@@ -143,35 +188,6 @@ public partial class MainWindow : Gtk.Window
     {
         mb.Homepage = mb.CurrentSite;
     }
-
-    public void CheckButtonsStatus()
-    {
-        if (mb.History.PreviousSites.Count == 0)
-        {
-            previousButton.Sensitive = false;
-        }
-        else
-        {
-            previousButton.Sensitive = true;
-        }
-
-        if (mb.History.NextSites.Count == 0)
-        {
-            nextButton.Sensitive = false;
-        }
-        else
-        {
-            nextButton.Sensitive = true;
-        }
-    }
-
-    public void LoadSite(string url)
-    {
-        urlEntry.Text = url;
-        htmlTextView.Buffer.Text = "";
-        CheckButtonsStatus();
-    }
-
 
 }
 

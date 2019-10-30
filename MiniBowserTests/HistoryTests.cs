@@ -6,6 +6,9 @@ namespace MiniBowserTests
     [TestFixture]
     public class HistoryTests
     {
+        /// <summary>
+        /// Test the initialisation of a History object.
+        /// </summary>
         [Test]
         public void TestInitialisation()
         {
@@ -16,6 +19,10 @@ namespace MiniBowserTests
             Assert.IsTrue(hist.UrlList.Contains("https://www.google.com/"));
         }
 
+
+        /// <summary>
+        /// Test the initialisation using the empty constructor.
+        /// </summary>
         [Test]
         public void TestDefaultInitialisation()
         {
@@ -25,7 +32,10 @@ namespace MiniBowserTests
             // Assert
             Assert.IsTrue(hist.UrlList.Contains("https://www.google.com/"));
         }
-
+        
+        /// <summary>
+        /// Test that adding a site to the list works.
+        /// </summary>
         [Test]
         public void TestAddSiteToList()
         {
@@ -40,6 +50,10 @@ namespace MiniBowserTests
             Assert.AreEqual("https://www.hw.ac.uk/", hist.GetLastSite());
         }
 
+        /// <summary>
+        /// Test that adding a new site adds it to the url list and the previous
+        /// sites stack.
+        /// </summary>
         [Test]
         public void TestAddNewSite()
         {
@@ -57,6 +71,10 @@ namespace MiniBowserTests
             Assert.AreEqual("https://www.hw.ac.uk/", hist.PreviousSites.Pop());
         }
 
+        /// <summary>
+        /// Test that calling the previous site adds the current site to the
+        /// next sites stack and outputs the top of the previous sites stack.
+        /// </summary>
         [Test]
         public void TestPreviousSite()
         {
@@ -75,6 +93,10 @@ namespace MiniBowserTests
 
         }
 
+        /// <summary>
+        /// Test that calling the next site adds the current site to the
+        /// previous sites stack and outputs the top of the next sites stack.
+        /// </summary>
         [Test]
         public void TestNextSite()
         {

@@ -13,6 +13,9 @@ namespace MiniBowserTests
         string expectedHistory = "{\"UrlList\":[\"https://www.google.com/\",\"https://www.hw.ac.uk/\",\"https://www.vision.hw.ac.uk/\",\"https://www.outlook.com/\"],\"PreviousSites\":[\"https://www.outlook.com/\",\"https://www.vision.hw.ac.uk/\",\"https://www.hw.ac.uk/\"],\"NextSites\":[]}";
         string expectedBookmarks = "[{\"Name\":\"Google\",\"Url\":\"http://www.google.com/\"},{\"Name\":\"HWU\",\"Url\":\"http://www.hw.ac.uk/\"},{\"Name\":\"Vision\",\"Url\":\"http://www.vision.hw.ac.uk/\"},{\"Name\":\"Mail\",\"Url\":\"http://www.outlook.com/\"}]";
 
+        /// <summary>
+        /// Deletes the existing json files.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -22,6 +25,9 @@ namespace MiniBowserTests
             serializer = new Serializer();
         }
 
+        /// <summary>
+        /// Test the serialization of a history object.
+        /// </summary>
         [Test]
         public void TestSerializeAndStoreHistory()
         {
@@ -39,6 +45,9 @@ namespace MiniBowserTests
             Assert.AreEqual(expectedHistory, actual);
         }
 
+        /// <summary>
+        /// Test the serialization of a list of bookamrks.
+        /// </summary>
         [Test]
         public void TestSerializeAndStoreBookmarks()
         {
@@ -57,6 +66,9 @@ namespace MiniBowserTests
             Assert.AreEqual(expectedBookmarks, actual);
         }
 
+        /// <summary>
+        /// Test the serialization of a homepage.
+        /// </summary>
         [Test]
         public void TestSerializeAndStoreHomePage()
         {
@@ -70,6 +82,9 @@ namespace MiniBowserTests
             Assert.AreEqual("\"https://www.google.com/\"", File.ReadAllText(Serializer.pathHomepage));
         }
 
+        /// <summary>
+        /// Test the serialization of a browser object.
+        /// </summary>
         [Test]
         public void TestSerializeAndStoreBrowser()
         {

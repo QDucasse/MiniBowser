@@ -55,13 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="MainWindow.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </Compile>
+    <Compile Include="Program.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BookmarksWindow.cs" />
+    <Compile Include="BookmarksWindow.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </Compile>
     <Compile Include="gtk-gui\MiniBowserGUI.BookmarksWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
-    <Compile Include="HistWindow.cs" />
+    <Compile Include="HistWindow.cs">
+      <IncludeInPackage>true</IncludeInPackage>
+    </Compile>
     <Compile Include="gtk-gui\MiniBowserGUI.HistWindow.cs" />
   </ItemGroup>
   <ItemGroup>

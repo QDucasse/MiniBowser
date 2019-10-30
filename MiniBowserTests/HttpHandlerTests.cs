@@ -7,6 +7,9 @@ namespace MiniBowserTests
     [TestFixture]
     public class HttpHandlerTests
     {
+        /// <summary>
+        /// Test the status for a Success (200).
+        /// </summary>
         [Test]
         public void TestStatusCode200()
         {
@@ -22,6 +25,9 @@ namespace MiniBowserTests
             Assert.AreEqual(requestRes.StatusCode, "OK");
         }
 
+        /// <summary>
+        /// Test the status for a BadRequest (400).
+        /// </summary>
         [Test]
         public void TestStatusCode400()
         {
@@ -37,6 +43,9 @@ namespace MiniBowserTests
             Assert.AreEqual(requestRes.StatusCode, "BadRequest");
         }
 
+        /// <summary>
+        /// Test the status for a Forbidden (403).
+        /// </summary>
         [Test]
         public void TestStatusCode403()
         {
@@ -52,6 +61,9 @@ namespace MiniBowserTests
             Assert.AreEqual(requestRes.StatusCode, "Forbidden");
         }
 
+        /// <summary>
+        /// Test the status for a NotFound (404).
+        /// </summary>
         [Test]
         public void TestStatusCode404()
         {
@@ -67,6 +79,9 @@ namespace MiniBowserTests
             Assert.AreEqual(requestRes.StatusCode, "NotFound");
         }
 
+        /// <summary>
+        /// Test the status for an incorrect url.
+        /// </summary>
         [Test]
         public void TestRequestIncorrectUrl()
         {
@@ -85,6 +100,9 @@ namespace MiniBowserTests
     [TestFixture]
     public class HttpDataTests
     {
+        /// <summary>
+        /// Test the default initialisation of an HttpData object
+        /// </summary>
         [Test]
         public void TestInitialisation()
         {
@@ -96,6 +114,9 @@ namespace MiniBowserTests
             Assert.AreEqual("No body", httpData.HtmlBody);
         }
 
+        /// <summary>
+        /// Test the ToString() output.
+        /// </summary>
         [Test]
         public void TestToString()
         {
